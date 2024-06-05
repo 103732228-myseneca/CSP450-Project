@@ -16,7 +16,7 @@
 Submit a Network Diagram with all pertinent information about the project.
 Someone should be able to look at your diagram and understand your project well enough to build it.
 
-![Network Diagram](insert-screenshot-here)
+![Network Diagram](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/Network%20Configuration.png)
 
 ## Aruba 6300 Switch Configuration
 ##### Switch 1(on top of rack)
