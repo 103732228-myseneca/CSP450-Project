@@ -13,9 +13,6 @@
 
 ## :star: Network Configuration Documentation
 ## Network Diagram
-Submit a Network Diagram with all pertinent information about the project.
-Someone should be able to look at your diagram and understand your project well enough to build it.
-
 ![Network Diagram](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/Network%20Configuration.png)
 
 ## Aruba 6300 Switch Configuration
@@ -72,4 +69,73 @@ enable
 - default gateway 172.16.120.1
 - dhcp pool: 172.16.120.1 - 172.16.120.62
 
+## VM SETUP PC1
 
+1. Create Ubuntu VM
+2. Configure network adaptors:
+   - Bridge and NAT network adaptors to ensure connectivity. The bridged adaptor connects to the lab network (through the Aruba switch), and the NAT adaptor provides internet access through the host machine.
+3. Run command in terminal to add a route:
+    ```bash
+    sudo ip route add 172.16.120.47 via 172.16.112.1
+    ```
+4. Generate SSH key pair:
+    ```bash
+    ssh-keygen
+    ```
+5. Transfer the public key to PC2:
+    ```bash
+    scp ~/.ssh/id_rsa.pub user@172.16.120.47:~/id_rsa.pub
+    ```
+6. Create a new user and set a password on the server.
+7. Copy your public key to the server:
+    ```bash
+    ssh-copy-id user@172.16.120.47
+    ```
+    Alternatively, you can manually copy the contents of `~/.ssh/id_rsa.pub` to the `~/.ssh/authorized_keys` file on the server.
+8. Configure the `sshd_config` file to allow the new user and disable root SSH access. Edit the file:
+    ```bash
+    sudo nano /etc/ssh/sshd_config
+    ```
+    Add or modify the following directives:
+    ```plaintext
+    AllowUsers user
+    PermitRootLogin no
+    ```
+
+## VM SETUP PC2
+
+1. Create Ubuntu VM
+2. Configure network adaptors:
+   - Bridge and NAT network adaptors to ensure connectivity. The bridged adaptor connects to the lab network (through the Aruba switch), and the NAT adaptor provides internet access through the host machine.
+3. Run command in terminal to add a route:
+    ```bash
+    sudo ip route add 172.16.112.13 via 172.16.120.1
+    ```
+4. Create a new user and set a password:
+    ```bash
+    sudo adduser newuser
+    ```
+    Follow the prompts to set the user password and other information.
+5. Create `.ssh` directory and set permissions:
+    ```bash
+    mkdir -p ~/.ssh
+    chmod 700 ~/.ssh
+    ```
+6. Configure `authorized_keys` file to allow SSH access:
+    ```bash
+    cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+    chmod 600 ~/.ssh/authorized_keys
+    ```
+7. Configure the `sshd_config` file to allow the new user and disable root SSH access. Edit the file:
+    ```bash
+    sudo nano /etc/ssh/sshd_config
+    ```
+    Add or modify the following directives:
+    ```plaintext
+    AllowUsers newuser
+    PermitRootLogin no
+    ```
+8. Restart the SSH service:
+    ```bash
+    sudo systemctl restart ssh
+    ```
