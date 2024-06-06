@@ -44,6 +44,8 @@ vlan access 3
 interface vlan 3
 ip address 172.16.120.1/26
 
+no dhcp-server vrf default
+
 dhcp-server vrf default
 pool 1
 range 172.16.112.1 172.16.112.62 prefix-len 26
@@ -52,7 +54,7 @@ exit
 
 dhcp-server vrf default
 pool 2
-range 172.120.116.1 172.16.120.62 prefix-len 26
+range 172.120.120.1 172.16.120.62 prefix-len 26
 default-router 172.16.120.1
 exit
 
