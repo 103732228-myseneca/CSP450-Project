@@ -1,5 +1,5 @@
 # CSP451 Project 1
-
+## :white_check_mark: INSPECTION PASSED
 ##### :blue_book: **COURSE INFORMATION:** Computer Systems Projects: On Premises Networking and Server Administration
 ##### :page_with_curl: **FULL COURSE CODE:** CSP450NDD.07194.2244 
 ##### :book: **INSTRUCTOR’S NAME:** Sebastian Maurice
