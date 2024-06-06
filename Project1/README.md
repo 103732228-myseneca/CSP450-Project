@@ -78,7 +78,7 @@ enable
    - Bridge and NAT network adaptors to ensure connectivity. The bridged adaptor connects to the lab network (through the Aruba switch), and the NAT adaptor provides internet access through the host machine.
 3. Run command in terminal to add a route:
     ```bash
-    sudo ip route add 172.16.120.47 via 172.16.112.1
+    sudo ip route add 172.16.120.4 via 172.16.112.1
     ```
 4. Generate SSH key pair:
     ```bash
@@ -86,12 +86,12 @@ enable
     ```
 5. Transfer the public key to PC2:
     ```bash
-    scp ~/.ssh/id_rsa.pub user@172.16.120.47:~/id_rsa.pub
+    scp ~/.ssh/id_rsa.pub user@172.16.120.4:~/id_rsa.pub
     ```
 6. Create a new user and set a password on the server.
 7. Copy your public key to the server:
     ```bash
-    ssh-copy-id user@172.16.120.47
+    ssh-copy-id user@172.16.120.4
     ```
     Alternatively, you can manually copy the contents of `~/.ssh/id_rsa.pub` to the `~/.ssh/authorized_keys` file on the server.
 8. Configure the `sshd_config` file to allow the new user and disable root SSH access. Edit the file:
@@ -111,7 +111,7 @@ enable
    - Bridge and NAT network adaptors to ensure connectivity. The bridged adaptor connects to the lab network (through the Aruba switch), and the NAT adaptor provides internet access through the host machine.
 3. Run command in terminal to add a route:
     ```bash
-    sudo ip route add 172.16.112.13 via 172.16.120.1
+    sudo ip route add 172.16.112.36 via 172.16.120.1
     ```
 4. Create a new user and set a password:
     ```bash
