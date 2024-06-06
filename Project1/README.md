@@ -54,7 +54,7 @@ exit
 
 dhcp-server vrf default
 pool 2
-range 172.120.120.1 172.16.120.62 prefix-len 26
+range 172.16.120.1 172.16.120.62 prefix-len 26
 default-router 172.16.120.1
 exit
 
