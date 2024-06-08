@@ -141,3 +141,16 @@ enable
     ```bash
     sudo systemctl restart ssh
     ```
+
+## VM execute commands output
+- `ip a`
+![ip a](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/ip%20a.png)
+- `ip route`
+![ip route](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/ip%20route.png)
+- The SSH result from your Ubuntu VM to your partner's VM
+![SSH result](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/ssh%20result.png)
+- `sshd_config` file :
+[Project Configuration Files](https://github.com/103732228-myseneca/CSP450-Project/tree/main/Project1/configs)
+
+## Switch execute commands output
+- to continue
