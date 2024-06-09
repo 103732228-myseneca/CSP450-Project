@@ -142,6 +142,14 @@ enable
     sudo systemctl restart ssh
     ```
 
+## Wireshark
+[Click here for Wireshark Files](https://github.com/103732228-myseneca/CSP450-Project/tree/main/Project1/wireshark)
+#### Screenshots:
+- wireshark ssh from pc 1 to switch
+![wireshark ssh from pc 1 to switch](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/wireshark%20ssh%20from%20pc%201%20to%20switch.png)
+- wireshark ssh from pc 1 to pc 2
+![wireshark ssh from pc 1 to pc 2](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/wireshark%20ssh%20from%20pc%201%20to%20pc%202.png)
+
 ## VM execute commands output
 - `ip a`
 ![ip a](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/ip%20a.png)
@@ -153,4 +161,11 @@ enable
 [Project Configuration Files](https://github.com/103732228-myseneca/CSP450-Project/tree/main/Project1/configs)
 
 ## Switch execute commands output
-- to continue
+- `sh ip int br`
+![sh ip int br](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/sh%20ip%20int%20br.png)
+- `sh vlan`
+![sh vlan](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/sh%20vlan.png)
+- `sh spanning-tree`
+![sh spanning-tree](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/sh%20spanning-tree.png)
+- `sh dhcp-server leases`
+![sh dhcp-server leases](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project1/images/sh%20dhcp-server%20leases.png)
