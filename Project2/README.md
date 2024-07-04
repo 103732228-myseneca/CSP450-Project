@@ -181,7 +181,7 @@ sudo systemctl enable apache2
 - The SSH result from your Ubuntu VM to your partner's VM
 ![SSH result](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/commands_entered/ssh%20result%20from%20pc%201%20to%20pc%202.png)
 - `sshd_config` file :
-[Project Configuration Files]()
+[sshd_config file](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/configs/sshd_config)
 
 ## Switch execute commands output
 - `sh ip int br`
