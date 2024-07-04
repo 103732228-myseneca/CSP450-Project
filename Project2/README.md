@@ -15,7 +15,7 @@
 
 ## :star: Network Configuration Documentation
 ## Network Diagram
-![Network Diagram](insert link here)
+![Network Diagram](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/screenshot_extras/Network%20Configuration%20Diagram.png)
 
 ## Aruba 6300 Switch Configuration
 ##### Switch 1(on top of rack)
@@ -100,23 +100,34 @@ HP-2530-24-PoEP(vlan-120)# tagged trk1
 HP-2530-24-PoEP(vlan-120)# exit
 ```
 
+##### VLAN 2 Configuration
+- network 172.20.112.0/25
+- default gateway 172.20.112.1
+- dhcp pool: 172.16.112.1 - 172.16.112.126
+##### VLAN 3 Configuration
+- network 172.20.120.0/25
+- default gateway 172.20.120.1
+- dhcp pool: 172.20.120.1 - 172.20.120.126
+
+
 # VM Setup (Ubuntu Oracle Box VM)
 1. **Network Adapters**
+- For both PCs
 - Configure two network adapters:
 - Adapter 1: Bridged Adapter (connects to lab network)
 - Adapter 2: NAT Adapter (provides internet access)
 
 2. **Set Up Network Configuration**
-- For Student P's VM {PC1} (VLAN 10):
+- For PC1
 ```bash
 sudo ip route add 172.20.112.17 via 172.20.120.1
 ```
-- For Student M's VM {PC2} (VLAN 20):
+- For PC2
 ```bash
 sudo ip route add 172.20.120.45 172.20.112.1
 ```
 
-# Apache Web Server Setup on VMs
+# Apache Web Server Setup on VM for PC1
 1. **Install Apache**
 ```bash
 sudo apt update
@@ -125,7 +136,24 @@ sudo apt install apache2
 
 2. **Create Custom Webpage** :pushpin: UPDATE THIS :pushpin:
 ```bash
-echo "UPDATE THIS" | sudo tee /var/www/html/index.html
+sudo tee /var/www/html/index.html <<EOF
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 2 for CSP450.</title>
+</head>
+<body>
+    <h1>Hello! This is Project 2 for CSP450.</h1>
+    <p>Members of this project are following their student ID number:</p>
+    <ul>
+        <li>Micaira Mateo - ID#103732228</li>
+        <li>Prabin Acharya - ID#100706225</li>
+        <li>Robert Akkerman - ID#106234206</li>
+    </ul>
+</body>
+</html>
+EOF
+
 ```
 
 3. **Start Apache Service**
@@ -134,29 +162,37 @@ sudo systemctl start apache2
 sudo systemctl enable apache2
 ```
 
-# Verification and Testing
-1. **SSH from Ubuntu VM to Switch XX (Student P)**
-```bash
-ssh admin@172.20.112.1
-```
-2. **Console into Switch YY (Student M) with Putty**
-3. **SSH into Partner's Ubuntu VM (Student P to Student M)**
-```bash
-ssh pacharya9@172.20.120.45
-```
-4. **Disable Root SSH Access**
-```bash
-sudo nano /etc/ssh/sshd_config
-# Add or modify:
-PermitRootLogin no
-AllowUsers newuser
-sudo systemctl restart ssh
-```
-5. **Verify Webpage on Apache Server**
-```bash
-curl http://172.20.120.2
-```
-6. **Check Internet Access**
-```bash
-ping google.com
-```
+## Wireshark
+[Click here for Wireshark Files](https://github.com/103732228-myseneca/CSP450-Project/tree/main/Project2/wireshark)
+#### Screenshots:
+- An SSH request from your Ubuntu VM to the Switch and the subsequent reply (2 packets) 
+![SSH request from your Ubuntu VM to the Switch](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/screenshot_extras/wireshark%20screenshot%20ssh%20request%20ubuntu%20vm%20to%20switch.png)
+- An SSH request from your Ubuntu VM to your partner's Ubuntu VM and the subsequent reply (2 Packets)
+![SSH request from your Ubuntu VM to your partner's Ubuntu VM](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/screenshot_extras/wireshark%20screenshot%20ssh%20request%20ubuntu%20vm%20to%20partner%20vm.png)
+- An HTTP request to your partner's Apache server and the subsequent response (2 Packets) 
+![HTTP request to your partner's Apache server](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/screenshot_extras/wireshark%20screenshot%20http%20request%20to%20your%20partner%20apache%20server.png)
+ 
+
+## VM execute commands output
+- `ip a`
+![ip a](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/commands_entered/ip%20a%20from%20pc%201.png)
+- `ip route`
+![ip route](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/commands_entered/ip%20route.png)
+- The SSH result from your Ubuntu VM to your partner's VM
+![SSH result](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/commands_entered/ssh%20result%20from%20pc%201%20to%20pc%202.png)
+- `sshd_config` file :
+[Project Configuration Files]()
+
+## Switch execute commands output
+- `sh ip int br`
+![sh ip int br](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/commands_entered/sh%20ip%20int%20br.png)
+- `sh vlan`
+![sh vlan](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/commands_entered/sh%20vlan.png)
+- `sh spanning-tree`
+![sh spanning-tree](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/commands_entered/sh%20spanning-tree.png)
+- `sh dhcp-server leases`
+![sh dhcp-server leases](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project2/images/commands_entered/sh%20dhcp-server%20leases.png)
+
+
+
+
