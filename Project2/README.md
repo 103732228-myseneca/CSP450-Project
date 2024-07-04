@@ -134,7 +134,7 @@ sudo apt update
 sudo apt install apache2
 ```
 
-2. **Create Custom Webpage** :pushpin: UPDATE THIS :pushpin:
+2. **Create Custom Webpage**
 ```bash
 sudo tee /var/www/html/index.html <<EOF
 <!DOCTYPE html>
