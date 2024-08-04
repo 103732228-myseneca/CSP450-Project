@@ -16,11 +16,9 @@ SWITCH-BB(eth-1)# int 7
 
 SWITCH-BB(eth-7)# tagged vlan 120 
 
-
 SWITCH-BB(eth-7)# int 8 
 
 SWITCH-BB(eth-8)# tagged vlan 120 
-
 
 SWITCH-BB(eth-8)# exit 
 
