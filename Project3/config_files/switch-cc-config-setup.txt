@@ -1,0 +1,95 @@
+6300# conf t 
+
+6300(config)# hostname SWITCH-CC 
+
+SWITCH-CC(config)# vlan 113 
+
+SWITCH-CC(config-vlan-113)# vlan 121 
+
+SWITCH-CC(config-vlan-121)# int vlan 113 
+
+SWITCH-CC(config-if-vlan)# ip address 172.16.113.127 
+
+SWITCH-CC(config-if-vlan)# ip helper-address 192.168.120.1 
+
+SWITCH-CC(config-if-vlan)# no shutdown 
+
+SWITCH-CC(config-if-vlan)# int vlan 121 
+
+SWITCH-CC(config-if-vlan)# ip address 172.16.121.127 
+
+SWITCH-CC(config-if-vlan)# ip helper-address 192.168.120.1 
+
+SWITCH-CC(config-if-vlan)# no shutdown 
+
+SWITCH-CC(config-if-vlan)# int 111 
+
+SWITCH-CC(config-if)# vlan access 113 
+
+SWITCH-CC(config-if)# no shutdown 
+
+SWITCH-CC(config-if)# int lag 121 
+
+SWITCH-CC(config-lag-if)# no routing 
+
+SWITCH-CC(config-lag-if)# no shutdown 
+
+SWITCH-CC(config-lag-if)# vlan trunk allowed 1,113,121 
+
+SWITCH-CC(config-lag-if)# lacp mode active 
+
+SWITCH-CC(config-lag-if)# exit 
+
+SWITCH-CC(config)# int 117 
+
+SWITCH-CC(config-if)# no shutdown 
+
+SWITCH-CC(config-if)# lag 121 
+
+SWITCH-CC(config-if)# int 118 
+
+SWITCH-CC(config-if)# no shutdown 
+
+SWITCH-CC(config-if)# lag 121 
+
+SWITCH-CC(config-if)# int lag 1 
+
+SWITCH-CC(config-lag-if)# routing 
+
+SWITCH-CC(config-lag-if)# no shutdown 
+
+SWITCH-CC(config-lag-if)# ip address 192.168.120.230 
+
+SWITCH-CC(config-lag-if)# lacp mode active 
+
+SWITCH-CC(config-lag-if)# lacp rate fast 
+
+SWITCH-CC(config-lag-if)# int 115 
+
+SWITCH-CC(config-if)# no shutdown 
+
+SWITCH-CC(config-if)# lag 1 
+
+SWITCH-CC(config-if)# int 116 
+
+SWITCH-CC(config-if)# no shutdown 
+
+SWITCH-CC(config-if)# lag 1 
+
+SWITCH-CC(config-if)# router ospf 1 
+
+SWITCH-CC(config-ospf-1)# area 0 
+
+SWITCH-CC(config-ospf-1)# exit 
+
+SWITCH-CC(config)# int vlan 113 
+
+SWITCH-CC(config-if-vlan)# ip ospf 1 area 0 
+
+SWITCH-CC(config-if-vlan)# int vlan 121 
+
+SWITCH-CC(config-if-vlan)# ip ospf 1 area 0 
+
+SWITCH-CC(config-if-vlan)# int lag 1 
+
+SWITCH-CC(config-lag-if)# ip ospf 1 area 0 

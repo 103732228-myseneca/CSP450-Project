@@ -1,0 +1,129 @@
+6300# conf t 
+
+6300(config)# hostname SWITCH-AA 
+
+SWITCH-AA(config)# vlan 112 
+
+SWITCH-AA(config-vlan-112)# vlan 120 
+
+SWITCH-AA(config-vlan-120)# int vlan 112 
+
+SWITCH-AA(config-if-vlan)# ip address 172.16.112.1/27 
+
+SWITCH-AA(config-if-vlan)# no shutdown 
+
+SWITCH-AA(config-if-vlan)# int vlan 120 
+
+SWITCH-AA(config-if-vlan)# ip address 172.16.120.1/27 
+
+SWITCH-AA(config-if-vlan)# no shutdown 
+
+SWITCH-AA(config-if-vlan)# int 1/1/1 
+
+SWITCH-AA(config-if)# vlan access 112 
+
+SWITCH-AA(config-if)# no shutdown 
+
+SWITCH-AA(config-if)# dhcp-server vrf default 
+
+SWITCH-AA(config-dhcp-server)# pool VLAN112 
+
+SWITCH-AA(config-dhcp-server-pool)# range 172.16.112.2 172.16.112.30 prefix-len 27 
+
+SWITCH-AA(config-dhcp-server-pool)# default-router 172.16.112.1 
+
+SWITCH-AA(config-dhcp-server-pool)# exit 
+
+SWITCH-AA(config-dhcp-server)# pool VLAN120 
+
+SWITCH-AA(config-dhcp-server-pool)# range 172.16.120.2 172.16.120.30 prefix-len 27 
+
+SWITCH-AA(config-dhcp-server-pool)# default-router 172.16.120.1 
+
+SWITCH-AA(config-dhcp-server-pool)# exit 
+
+SWITCH-AA(config-dhcp-server)# pool VLAN113 
+
+SWITCH-AA(config-dhcp-server-pool)# range 172.16.113.2 172.16.113.30 prefix-len 27 
+
+SWITCH-AA(config-dhcp-server-pool)# default-router 172.16.113.1 
+
+SWITCH-AA(config-dhcp-server-pool)# exit 
+
+SWITCH-AA(config-dhcp-server)# pool VLAN121 
+
+SWITCH-AA(config-dhcp-server-pool)# range 172.16.121.2 172.16.121.30 prefix-len 27 
+
+SWITCH-AA(config-dhcp-server-pool)# default-router 172.16.121.1 
+
+SWITCH-AA(config-dhcp-server-pool)# exit 
+
+SWITCH-AA(config-dhcp-server)# enable 
+
+SWITCH-AA(config-dhcp-server)# exit 
+
+SWITCH-AA(config)# int lag 120 
+
+SWITCH-AA(config-lag-if)# no routing 
+
+SWITCH-AA(config-lag-if)# no shutdown 
+
+SWITCH-AA(config-lag-if)# vlan trunk allowed 1,112,120 
+
+SWITCH-AA(config-lag-if)# lacp mode active 
+
+SWITCH-AA(config-lag-if)# exit 
+
+SWITCH-AA(config)# int 1/1/7 
+
+SWITCH-AA(config-if)# no shutdown 
+
+SWITCH-AA(config-if)# lag 120 
+
+SWITCH-AA(config-if)# int 1/1/8 
+
+SWITCH-AA(config-if)# no shutdown 
+
+SWITCH-AA(config-if)# lag 120 
+
+SWITCH-AA(config-if)# int lag 1 
+
+SWITCH-AA(config-lag-if)# routing 
+
+SWITCH-AA(config-lag-if)# no shut 
+
+SWITCH-AA(config-lag-if)# ip address 192.168.120.1/30 
+
+SWITCH-AA(config-lag-if)# lacp mode active 
+
+SWITCH-AA(config-lag-if)# lacp rate fast 
+
+SWITCH-AA(config-lag-if)# int 1/1/5 
+
+SWITCH-AA(config-if)# no shutdown 
+
+SWITCH-AA(config-if)# lag 1 
+
+SWITCH-AA(config-if)# int 1/1/6 
+
+SWITCH-AA(config-if)# no shutdown 
+
+SWITCH-AA(config-if)# lag 1 
+
+SWITCH-AA(config-if)# router ospf 1 
+
+SWITCH-AA(config-ospf-1)# area 0 
+
+SWITCH-AA(config-ospf-1)# exit 
+
+SWITCH-AA(config)# int vlan 112 
+
+SWITCH-AA(config-if-vlan)# ip ospf 1 area 0 
+
+SWITCH-AA(config-if-vlan)# int vlan 120 
+
+SWITCH-AA(config-if-vlan)# ip ospf 1 area 0 
+
+SWITCH-AA(config-if-vlan)# int lag 1 
+
+SWITCH-AA(config-lag-if)# ip ospf 1 area 0 

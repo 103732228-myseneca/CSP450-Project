@@ -1,0 +1,35 @@
+HP-2530-24-PoEP# 
+
+HP-2530-24-PoEP# conf t 
+
+HP-2530-24-PoEP(config)# hostname SWITCH-DD 
+
+SWITCH-DD(config)# vlan 121 
+
+SWITCH-DD(vlan-121)# int 1 
+
+SWITCH-DD(eth-1)# untagged vlan 121 
+
+SWITCH-DD(eth-1)# int 7 
+
+SWITCH-DD(eth-7)# tagged vlan 121 
+
+SWITCH-DD(eth-7)# int 8 
+
+SWITCH-DD(eth-8)# tagged vlan 121 
+
+SWITCH-DD(eth-8)# exit 
+
+SWITCH-DD(config)# trunk 7-8 trk1 lacp 
+
+SWITCH-DD(config)# int 1 enable 
+
+SWITCH-DD(config)# int 7 enable 
+
+SWITCH-DD(config)# int 8 enable 
+
+SWITCH-DD(config)# int trk1 
+
+SWITCH-DD(eth-Trk1)# tagged vlan 121 
+
+SWITCH-DD(eth-Trk1)# 
