@@ -42,10 +42,10 @@
 ```
 
   ##### Configuration Commands Used for SWITCH-AA
-[SWITCH-AA-Configuration]()
+[SWITCH-AA-Configuration](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/switch-aa-config-setup.txt)
   ##### Configuration Commands Used for SWITCH-BB
-[SWITCH-CC-Configuration]()
-<details>
+[SWITCH-CC-Configuration](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/switch-cc-config-setup.txt)
+</details>
 
 ## Aruba 2530 Series Switch Configuration
 <details>
@@ -61,10 +61,10 @@ COM3
 ```
 
   ##### Configuration Commands Used for SWITCH-BB
-[SWITCH-BB-Configuration]()
+[SWITCH-BB-Configuration](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/switch-bb-config-setup.txt)
   ##### Configuration Commands Used for SWITCH-DD
-[SWITCH-DD-Configuration]()
-<details>
+[SWITCH-DD-Configuration](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/switch-dd-config-setup.txt)
+</details>
 
 
 
