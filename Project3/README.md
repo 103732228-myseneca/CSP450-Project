@@ -25,7 +25,7 @@
 
 ## Aruba 6300 Switch Configuration
 <details>
-<summary>Click here to see the Switch 1 and 2 and PC IP-Range configurations</summary>
+<summary>Click here to see Switch 1 and 2 and PC IP-Range configurations</summary>
 
   ##### Switch 1(on top of rack)
 ```
@@ -47,9 +47,9 @@
 [SWITCH-CC-Configuration](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/switch-cc-config-setup.txt)
 </details>
 
-## Aruba 2530 Series Switch Configuration
+## Aruba 2530/2540 Series Switch Configuration
 <details>
-<summary>Click here to see the Switch 3 and 4 and PC IP-Range configurations</summary>
+<summary>Click here to see Switch 3 and 4 configurations</summary>
 
   ##### Switch 3 (below Switch 2)
 ```
