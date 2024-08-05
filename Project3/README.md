@@ -24,13 +24,15 @@
   - ##### :pushpin: **SUBNET NUMBER:** 114
 </details>
 
+:bulb: Note: PC A = PC1, PC B = PC2, PC C = PC3, PC D = PC4
+
 ## :star: Network Configuration Documentation
 ## Network Diagram
 ![Network Diagram](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/Network%20Diagaram.png)
 
 ## Aruba 6300 Switch Configuration
 <details>
-<summary>Click here to see Switch 1 and 2 and PC IP-Range configurations</summary>
+<summary>Click here to see Switch 1 and 2 configurations</summary>
 
   ##### Switch 1(on top of rack)
 ```
@@ -96,22 +98,83 @@ COM3
 
 ## Ubuntu VM execute commands output
 <details>
-  <summary>Screenshots</summary>
+  <summary>Screenshots:</summary>
   
 - ip a 
-![ubuntu-vm-sc-1]()
+![ubuntu-vm-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-ip-a.png)
 
 - ip route 
-![ubuntu-vm-sc-2]()
+![ubuntu-vm-sc-2](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-ip-route.png)
 
-- The SSH result from your Ubuntu VM to your parnter's VM 
-![ubuntu-vm-sc-3]()
+- The SSH result from your Ubuntu VM to your parnter's VM
+<details>
+  <summary>From PCA ssh to PC B</summary>
+  
+![ubuntu-vm-sc-3](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-ssh-to-pc-b.png)
+
+</details>
+
+<details>
+  <summary>From PCA ssh to PC C</summary>
+  
+![ubuntu-vm-sc-4](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-ssh-to-pc-c.png)
+
+</details>
+
+<details>
+  <summary>From PCA ssh to PC D</summary>
+  
+![ubuntu-vm-sc-5](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-ssh-to-pc-d.png)
+
+</details>
 
 - Connect to your partner's Apache server and display the web page 
-![ubuntu-vm-sc-4]()
+
+<details>
+  <summary>FROM PC1 visit Apache Server of PC2</summary>
+  
+![ubuntu-vm-sc-6](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-apache-to-pc-2.png)
+
+</details>
+
+<details>
+  <summary>FROM PC1 visit Apache Server of PC3</summary>
+  
+![ubuntu-vm-sc-7](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-apache-to-pc-3.png)
+
+</details>
+
+<details>
+  <summary>FROM PC1 visit Apache Server of PC4</summary>
+  
+![ubuntu-vm-sc-8](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-apache-to-pc-4.png)
+
+</details>
 
 - Connect to your parnter's MariaDB server as a Read-Only user and try to modify the database contents 
-![ubuntu-vm-sc-5]()
+
+<details>
+  <summary>FROM PC1 visit MariaDB Server of PC2</summary>
+  
+![ubuntu-vm-sc-9](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-mariadb-modify-pc-b.png)
+
+</details>
+
+<details>
+  <summary>FROM PC1 visit MariaDB Server of PC3</summary>
+  
+![ubuntu-vm-sc-10](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-mariadb-modify-pc-c.png)
+
+</details>
+
+<details>
+  <summary>FROM PC1 visit MariaDB Server of PC4</summary>
+  
+![ubuntu-vm-sc-11](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/pc-a-mariadb-modify-pc-d.png)
+
+</details>
+
+
 
 </details>
 
@@ -124,7 +187,7 @@ COM3
 ## Switch execute commands output
 
 <details>
-  <summary>Screenshots</summary>
+  <summary>Screenshots:</summary>
   
 - sh ip int br 
 ![switch-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/sh%20ip%20int%20br.png)
