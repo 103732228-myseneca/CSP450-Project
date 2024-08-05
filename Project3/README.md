@@ -66,5 +66,56 @@ COM3
 [SWITCH-DD-Configuration](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/switch-dd-config-setup.txt)
 </details>
 
+## Wireshark
+[Click here for Wireshark Files](https://github.com/103732228-myseneca/CSP450-Project/tree/main/Project3/wireshark_files/pcapng_files)
 
+#### Screenshots:
+- An SSH request from your Ubuntu VM to the Switch and the subsequent reply (2 packets)
+![wireshark-sc-1]()
 
+- On OSPF Packet, Any source/destination
+![wireshark-sc-2]()
+
+- An SSH request from your Ubuntu VM to your partner's Ubuntu VM and the subsequent reply (2 Packets)
+![wireshark-sc-3]()
+
+- An HTTP request to your partner's Apache server and the subsequent response (2 Packets)
+![wireshark-sc-4]()
+
+- A MariaDB request to your partner's MariaDB server and the subsequent response (2 Packets) 
+![wireshark-sc-5]()
+
+## Ubuntu VM execute commands output
+- ip a 
+![ubuntu-vm-sc-1]()
+
+- ip route 
+![ubuntu-vm-sc-2]()
+
+- The SSH result from your Ubuntu VM to your parnter's VM 
+![ubuntu-vm-sc-3]()
+
+- Connect to your partner's Apache server and display the web page 
+![ubuntu-vm-sc-4]()
+
+- Connect to your parnter's MariaDB server as a Read-Only user and try to modify the database contents 
+![ubuntu-vm-sc-5]()
+
+## sshd_config file
+[Click here to view]()
+
+## NFTABLES script
+[Click here to view]()
+
+## Switch execute commands output
+- sh ip int br 
+![switch-sc-1]()
+
+- sh vlan 
+![switch-sc-1]()
+
+- sh spanning-tree 
+![switch-sc-1]()
+
+- sh ip route
+![switch-sc-1]()
