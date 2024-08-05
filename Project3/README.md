@@ -26,7 +26,7 @@
 
 ## :star: Network Configuration Documentation
 ## Network Diagram
-![Network Diagram](insert link here)
+![Network Diagram](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/Network%20Diagaram.png)
 
 ## Aruba 6300 Switch Configuration
 <details>
@@ -76,19 +76,19 @@ COM3
 
 #### Screenshots:
 - An SSH request from your Ubuntu VM to the Switch and the subsequent reply (2 packets)
-![wireshark-sc-1]()
+![wireshark-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/wireshark_files/screenshots/ssh%20request%20from%20ubuntu%20vm%20pc%20a%20to%20the%20switch.jpg)
 
 - On OSPF Packet, Any source/destination
-![wireshark-sc-2]()
+![wireshark-sc-2](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/wireshark_files/screenshots/ospf%20packet.jpg)
 
 - An SSH request from your Ubuntu VM to your partner's Ubuntu VM and the subsequent reply (2 Packets)
-![wireshark-sc-3]()
+![wireshark-sc-3](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/wireshark_files/screenshots/ssh%20request%20from%20ubuntu%20vm%20to%20partner's%20ubuntu%20vm.jpg)
 
 - An HTTP request to your partner's Apache server and the subsequent response (2 Packets)
-![wireshark-sc-4]()
+![wireshark-sc-4](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/wireshark_files/screenshots/http%20request%20to%20partners%20apache%20server.jpg)
 
 - A MariaDB request to your partner's MariaDB server and the subsequent response (2 Packets) 
-![wireshark-sc-5]()
+![wireshark-sc-5](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/wireshark_files/screenshots/mariadb%20request%20to%20partner's%20maria%20db%20server.jpg)
 
 ## Ubuntu VM execute commands output
 - ip a 
@@ -114,13 +114,13 @@ COM3
 
 ## Switch execute commands output
 - sh ip int br 
-![switch-sc-1]()
+![switch-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/sh%20ip%20int%20br.png)
 
 - sh vlan 
-![switch-sc-1]()
+![switch-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/sh%20vlan.png)
 
 - sh spanning-tree 
-![switch-sc-1]()
+![switch-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/sh%20spanning-tree.png)
 
 - sh ip route
-![switch-sc-1]()
+![switch-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/sh%20ip%20route.png)
