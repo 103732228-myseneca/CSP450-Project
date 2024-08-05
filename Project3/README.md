@@ -74,7 +74,9 @@ COM3
 ## Wireshark
 [Click here for Wireshark Files](https://github.com/103732228-myseneca/CSP450-Project/tree/main/Project3/wireshark_files/pcapng_files)
 
-#### Screenshots:
+<details>
+  <summary>Screenshots:</summary>
+  
 - An SSH request from your Ubuntu VM to the Switch and the subsequent reply (2 packets)
 ![wireshark-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/wireshark_files/screenshots/ssh%20request%20from%20ubuntu%20vm%20pc%20a%20to%20the%20switch.jpg)
 
@@ -90,7 +92,12 @@ COM3
 - A MariaDB request to your partner's MariaDB server and the subsequent response (2 Packets) 
 ![wireshark-sc-5](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/wireshark_files/screenshots/mariadb%20request%20to%20partner's%20maria%20db%20server.jpg)
 
+</details>
+
 ## Ubuntu VM execute commands output
+<details>
+  <summary>Screenshots</summary>
+  
 - ip a 
 ![ubuntu-vm-sc-1]()
 
@@ -106,6 +113,8 @@ COM3
 - Connect to your parnter's MariaDB server as a Read-Only user and try to modify the database contents 
 ![ubuntu-vm-sc-5]()
 
+</details>
+
 ## sshd_config file
 [Click here to view](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/sshd_config)
 
@@ -113,6 +122,10 @@ COM3
 [Click here to view](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/nftables.conf)
 
 ## Switch execute commands output
+
+<details>
+  <summary>Screenshots</summary>
+  
 - sh ip int br 
 ![switch-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/sh%20ip%20int%20br.png)
 
@@ -124,3 +137,4 @@ COM3
 
 - sh ip route
 ![switch-sc-1](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/images/sh%20ip%20route.png)
+</details>
