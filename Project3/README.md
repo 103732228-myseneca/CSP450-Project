@@ -3,6 +3,9 @@
 ##### :blue_book: **COURSE INFORMATION:** Computer Systems Projects: On Premises Networking and Server Administration
 ##### :page_with_curl: **FULL COURSE CODE:** CSP450NDD.07194.2244 
 ##### :book: **INSTRUCTOR’S NAME:** Sebastian Maurice
+### Team Members:
+<details>
+  <summary>View Team Members here</summary>
 - ##### :raising_hand: **STUDENT NAME:** Micaira Mateo
   - ##### :name_badge: Student ID# 103732228
   - ##### :pushpin: **SUBNET NUMBER:** 120
@@ -18,6 +21,7 @@
 - ##### :raising_hand: **STUDENT NAME:** Eliza May Silvestre 
   - ##### :name_badge: Student ID# 186630216 
   - ##### :pushpin: **SUBNET NUMBER:** 114
+</details>
 
 ## :star: Network Configuration Documentation
 ## Network Diagram
