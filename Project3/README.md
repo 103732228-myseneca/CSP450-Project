@@ -6,6 +6,7 @@
 ### Team Members:
 <details>
   <summary>View Team Members here</summary>
+  
 - ##### :raising_hand: **STUDENT NAME:** Micaira Mateo
   - ##### :name_badge: Student ID# 103732228
   - ##### :pushpin: **SUBNET NUMBER:** 120
