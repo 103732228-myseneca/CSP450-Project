@@ -102,10 +102,10 @@ COM3
 ![ubuntu-vm-sc-5]()
 
 ## sshd_config file
-[Click here to view]()
+[Click here to view](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/sshd_config)
 
 ## NFTABLES script
-[Click here to view]()
+[Click here to view](https://github.com/103732228-myseneca/CSP450-Project/blob/main/Project3/config_files/nftables.conf)
 
 ## Switch execute commands output
 - sh ip int br 
